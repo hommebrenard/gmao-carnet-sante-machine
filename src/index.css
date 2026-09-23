@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Polygonal geometric crystalline background inspired by industrial GMAO portal */
+.bg-gmao-poly {
+  background-color: #f1f5fb;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(219, 234, 254, 0.6) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(224, 231, 255, 0.7) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(238, 242, 255, 0.5) 0px, transparent 60%),
+    radial-gradient(at 100% 100%, rgba(219, 234, 254, 0.5) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(224, 242, 254, 0.6) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+.poly-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600' opacity='0.35'%3E%3Cpath fill='%2393c5fd' fill-opacity='0.12' d='M0 0 L400 200 L200 400 Z'/%3E%3Cpath fill='%2360a5fa' fill-opacity='0.08' d='M400 200 L800 0 L600 350 Z'/%3E%3Cpath fill='%23a5b4fc' fill-opacity='0.1' d='M400 200 L600 350 L350 450 Z'/%3E%3Cpath fill='%2338bdf8' fill-opacity='0.07' d='M0 0 L200 400 L0 600 Z'/%3E%3Cpath fill='%23818cf8' fill-opacity='0.09' d='M200 400 L350 450 L150 600 Z'/%3E%3Cpath fill='%2393c5fd' fill-opacity='0.11' d='M350 450 L600 350 L800 600 Z'/%3E%3Cpath fill='%23bfdbfe' fill-opacity='0.15' d='M350 450 L800 600 L150 600 Z'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm;
+  }
+  
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* When printing the equipment datasheet, make it clean and centered */
+  #printable-equipment-sheet,
+  #printable-health-record {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 4mm 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+}
+

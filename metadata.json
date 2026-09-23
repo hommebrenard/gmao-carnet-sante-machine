@@ -1,0 +1,6 @@
+{
+  "name": "Carnet de Santé Équipement",
+  "description": "Application GMAO de gestion et carnet de santé d'équipements industriels avec suivi des interventions, maintenance préventive, planning, pièces détachées et indicateurs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
